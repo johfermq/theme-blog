@@ -1,6 +1,8 @@
 <template>
   <div id="home">
-    <feed />
+    <articles>
+      <banner />
+    </articles>
 
     <about />
 
@@ -14,7 +16,8 @@
 
     components: {
       About: () => import('@/components/home/About'),
-      Feed: () => import('@/components/home/Feed'),
+      Articles: () => import('@/components/home/Articles'),
+      Banner: () => import('@/components/home/Banner'),
       Social: () => import('@/components/home/Social')
     }
   }
