@@ -10,7 +10,8 @@
     "category": "Leisure"
   },
   {
-    "title": "The Adventure Begins"
+    "title": "The Adventure Begins",
+    "prominent": true
   },
   {
     "title": "Paris in Spring",

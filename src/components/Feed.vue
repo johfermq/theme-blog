@@ -11,6 +11,7 @@
         v-for="(article, i) in articles"
         :key="i"
         :size="layout[i]"
+        :value="article"
       />
     </v-layout>
   </v-container>
