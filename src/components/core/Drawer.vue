@@ -3,6 +3,7 @@
     v-model="drawer"
     app
     dark
+    temporary
   >
     <v-list>
       <v-list-tile
