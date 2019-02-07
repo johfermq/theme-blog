@@ -2,6 +2,7 @@
   <v-container
     id="social"
     tag="section"
+    grid-list-xl
   >
     <v-layout wrap>
       <v-flex

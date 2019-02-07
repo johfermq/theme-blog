@@ -2,7 +2,6 @@
   <v-container
     pa-0
     grid-list-md
-    mb-4
   >
     <base-subheading>On Instagram</base-subheading>
     <v-layout wrap>
