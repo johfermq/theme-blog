@@ -1,33 +1,33 @@
 <template>
   <v-footer
-    height="108"
+    class="py-4"
     dark
+    height="auto"
   >
     <v-container mx-auto>
-      <v-layout>
-        <v-btn
-          v-for="(item, i) in items"
-          :key="i"
-          fab
-          small
-          color="primary"
-          class="ml-0 v-btn--social-icon mr-3"
-          :href="item.href"
-          target="_blank"
-        >
-          <v-icon v-text="item.icon" />
-        </v-btn>
+      <v-layout wrap>
+        <v-flex xs9>
+          <base-btn
+            v-for="(item, i) in items"
+            :key="i"
+            :href="item.href"
+            class="ml-0 mr-3"
+            color="primary"
+            square
+            target="_blank"
+          >
+            <v-icon v-text="item.icon" />
+          </base-btn>
+        </v-flex>
         <v-spacer />
-        <v-btn
-          fab
-          small
-          color="primary"
-          class="mr-0 v-btn--social-icon"
+        <base-btn
+          class="mr-0"
+          square
           title="Go to top"
           @click="$vuetify.goTo(0)"
         >
           <v-icon>mdi-chevron-up</v-icon>
-        </v-btn>
+        </base-btn>
       </v-layout>
     </v-container>
   </v-footer>
@@ -69,9 +69,3 @@
     })
   }
 </script>
-
-<style lang="scss" scoped>
-.v-btn--social-icon {
-  border-radius: 2px !important;
-}
-</style>

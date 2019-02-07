@@ -3,6 +3,10 @@
     app
     flat
   >
+    <v-toolbar-side-icon
+      class="hidden-md-and-up"
+      @click="toggleDrawer"
+    />
     <v-container
       mx-auto
       py-0
@@ -13,13 +17,15 @@
           class="mr-5"
           contain
           height="48"
+          width="48"
           max-width="48"
+          @click="$vuetify.goTo(0)"
         />
         <v-btn
           v-for="(link, i) in links"
           :key="i"
           :to="link.to"
-          class="ml-0"
+          class="ml-0 hidden-sm-and-down"
           flat
           @click="onClick($event, item)"
         >
@@ -41,7 +47,8 @@
 <script>
   // Utilities
   import {
-    mapGetters
+    mapGetters,
+    mapMutations
   } from 'vuex'
 
   export default {
@@ -50,6 +57,7 @@
     },
 
     methods: {
+      ...mapMutations(['toggleDrawer']),
       onClick (e, item) {
         e.stopPropagation()
 

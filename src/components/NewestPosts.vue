@@ -1,17 +1,20 @@
 <template>
-  <v-container py-0>
+  <v-container
+    pa-0
+    mb-4
+  >
     <base-subheading>Newest Blog Posts</base-subheading>
     <v-layout
-      v-for="(article, i) in articles.slice(0, 3)"
+      v-for="(article, i) in articles.slice(11, 14)"
       :key="i"
       align-center
       mb-4
     >
-      <base-card
+      <v-img
+        :src="require(`@/assets/articles/${article.hero}`)"
         class="mr-3"
-        color="grey lighten-2"
         height="36"
-        width="36"
+        max-width="36"
       />
       <div>
         <div class="subheading">

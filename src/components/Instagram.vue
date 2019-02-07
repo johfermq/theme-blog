@@ -1,8 +1,8 @@
 <template>
   <v-container
     pa-0
-    pr-3
     grid-list-md
+    mb-4
   >
     <base-subheading>On Instagram</base-subheading>
     <v-layout wrap>
@@ -19,7 +19,8 @@
         >
           <v-img
             v-if="post.src"
-            :src="post.src"
+            height="100%"
+            :src="require(`@/assets/instagram/${post.src}`)"
           />
         </base-card>
       </v-flex>
@@ -31,12 +32,12 @@
   export default {
     data: () => ({
       posts: [
-        { src: '' },
-        { src: '' },
-        { src: '' },
-        { src: '' },
-        { src: '' },
-        { src: '' }
+        { src: 'adventurealtitude.jpg' },
+        { src: 'garden.jpg' },
+        { src: 'pigduck.jpg' },
+        { src: 'rain.jpg' },
+        { src: 'spices.jpg' },
+        { src: 'sunset.jpg' }
       ]
     })
   }

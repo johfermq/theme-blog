@@ -3,7 +3,7 @@
     id="social"
     tag="section"
   >
-    <v-layout>
+    <v-layout wrap>
       <v-flex
         xs12
         md4

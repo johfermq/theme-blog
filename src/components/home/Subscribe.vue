@@ -7,7 +7,10 @@
       color="rgba(203, 170, 92, 0.51)"
       class="pa-3"
     >
-      <v-container grid-list-xl>
+      <v-container
+        grid-list-xl
+        pa-0
+      >
         <v-layout wrap>
           <v-flex
             xs12
@@ -21,13 +24,17 @@
               and receive notifications of new posts by email.
             </p>
 
-            <v-layout>
+            <v-layout
+              wrap
+              pa-2
+            >
               <v-text-field
                 solo
                 hide-details
-                style="max-width: 70%;"
+                style="max-width: 400px;"
               />
               <v-btn
+                :block="$vuetify.breakpoint.xsOnly"
                 class="ma-0"
                 color="secondary"
                 style="height: 48px"

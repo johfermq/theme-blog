@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     articles: require('@/data/articles.json'),
+    drawer: false,
     items: [
       {
         text: 'Home',
@@ -42,7 +43,8 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-
+    setDrawer: (state, payload) => (state.drawer = payload),
+    toggleDrawer: state => (state.drawer = !state.drawer)
   },
   actions: {
 
